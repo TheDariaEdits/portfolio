@@ -36,15 +36,21 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+html{
+     font-size: 62.5%;
+}
 
-body {
-     color: rgb(255, 255, 255);
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
-     background-color: rgb(36, 34, 34);
+ body {
+     height: 100vh;
      width: 100%;
-     
+     margin: 0;
+     flex-flow: column nowrap;
+     color: rgb(255, 255, 255);
+     font-size: 1.5rem;
+     line-height: 1.4;
+     font-family: 'Iceberg', 'Roboto', cursive;
+     background-color: rgb(36, 34, 34);
+     justify-items: flex-end;
 }
 
 
@@ -52,11 +58,59 @@ body {
 /* LAYOUT
 /*******************************************/
 
+body {
+     width: 100vw;
+     overflow: hidden;
+     position: relative;
+}
+
+
+nav footer .container{
+     width: 100vw;
+     height: 5rem;
+     display: flex;
+     flex-flow: row nowrap;
+     align-items: center;
+     justify-content: center;
+     position: absolute;
+}
+
+.container{
+     width: 94vw;
+}
+
+ul{
+     list-style: none;
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: right
+}
+
+li{
+     display: list-item;
+     padding: 0 5vw;
+}
+
+#logoContainer {
+     display: flex;
+     flex-flow: column nowrap;
+     position: absolute;
+     align-items: flex-start;
+     top: 40vh;
+   }
+
+#moreInfo {
+  position: relative;
+  top: -5vh;
+  padding-left: 15vw;
+
+}
 
 #logo{
-     position: absolute;
-     top: 50%;
-     left: 50%;
+     position: relative;
+     width: 70vw;
+     height: auto;
+     left:50vw;
      transform: translate(-50%, -50%);
 }
 
@@ -156,7 +210,6 @@ body {
      to{
           stroke-dashoffset: 0%;
      }
-
 }
 
 @keyframes fill{
@@ -168,30 +221,13 @@ body {
      }
 }
 
-h3{
-     font-weight: 400;
+button{
+     margin-top: 1vh;
+     padding: 1vh;
+     background-color: rgb(210, 45, 183);
+     color: rgb(255, 255, 255);
+     border-radius: 5%;
 }
-header {
-     display: flex;
-     flex-flow: row nowrap;
-     justify-content: space-between
-}
-
-nav{
-     width: 100%;
-}
-ul{
-     list-style: none;
-     display: flex;
-     flex-flow: row nowrap;
-     justify-content: right
-}
-
-li{
-     display: inline-block;
-     padding: 0 5%;
-}
-
 
 
 /******************************************
