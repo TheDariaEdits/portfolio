@@ -91,6 +91,52 @@ li{
      padding: 0 5vw;
 }
 
+.header li a{
+     position: relative;
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+}
+
+.header li a::after{
+     content: "";
+     position: absolute;
+     background-color: rgb(146, 250, 220);
+     height: 3px;
+     width: 0;
+     left: 0;
+     bottom: -10px;
+     box-shadow: 0 0 10px rgb(146, 250, 220),
+     0 0 20px rgb(146, 250, 220),
+     0 0 40px rgb(146, 250, 220),
+     0 0 80px rgb(146, 250, 220),
+     0 0 160px rgb(146, 250, 220);
+     transition: 0.2s;
+     
+}
+
+.header li:nth-child(2) a::after{
+
+     background-color: rgb(207, 250, 143);
+     box-shadow: 0 0 10px rgb(207, 250, 143),
+     0 0 20px rgb(207, 250, 143),
+     0 0 40px rgb(207, 250, 143),
+     0 0 80px rgb(207, 250, 143),
+     0 0 160px rgb(207, 250, 143);    
+}
+
+.header li:nth-child(3) a::after{
+     background-color: rgb(248, 246, 143);
+     box-shadow: 0 0 10px rgb(248, 246, 143),
+     0 0 20px rgb(248, 246, 143),
+     0 0 40px rgb(248, 246, 143),
+     0 0 80px rgb(248, 246, 143),
+     0 0 160px rgb(248, 246, 143);   
+}
+
+.header a:hover:after{
+     width: 100%;
+}
+
 #logoContainer {
      display: flex;
      flex-flow: column nowrap;
@@ -221,13 +267,84 @@ li{
      }
 }
 
-button{
-     margin-top: 1vh;
-     padding: 1vh;
-     background-color: rgb(210, 45, 183);
+.button a{
+     position: relative;
+     display: inline-block;
+     border: 2px solid rgb(210, 45, 183);
+     padding: 15px 30px;
+     margin: 20px 0;
+     text-transform: uppercase;
+     text-decoration: none;
+     font-weight: 600;
+     letter-spacing: 2px;
      color: rgb(255, 255, 255);
-     border-radius: 5%;
+     -webkit-box-reflect: below 0px linear-gradient(transparent, #0002 );
+     transition: 0.2s;
+     transition-delay: 0s;
 }
+
+.button a:hover{
+     transition-delay: 0.2s;
+     color: rgb(36, 34, 34);
+     box-shadow: 0 0 10px rgb(210, 45, 183),
+     0 0 20px rgb(210, 45, 183),
+     0 0 40px rgb(210, 45, 183),
+     0 0 80px rgb(210, 45, 183),
+     0 0 160px rgb(210, 45, 183);
+}
+.button a span{
+     position: relative;
+     z-index: 100;
+}
+.button a::before{
+     content: '';
+     position: absolute;
+     left: -20px;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 20px;
+     height: 2px;
+     background: rgb(210, 45, 183);
+     box-shadow: 5px -8px 0 rgb(210, 45, 183);
+     box-shadow: 5px 8px 0 rgb(210, 45, 183);
+     transition: width 0.2s, left 0.2s, height 0.2s, box-shadow 0.2s;
+     transition-delay: 0.5s, 0.2s, 0s, 0s;
+}
+
+.button a:hover::before{
+     width: 60%;
+     height: 100%;
+     left: -2px;
+     box-shadow: 5px 0px 0 rgb(210, 45, 183);
+     box-shadow: 5px 0px 0 rgb(210, 45, 183);
+     transition-delay: 0s, 0s, 0.2s, 0.2s;
+}
+
+.button a::after{
+     content: '';
+     position: absolute;
+     right: -20px;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 20px;
+     height: 2px;
+     background: rgb(210, 45, 183);
+     box-shadow: -5px -8px 0 rgb(210, 45, 183);
+     box-shadow: -5px 8px 0 rgb(210, 45, 183);
+     transition: width 0.2s, left 0.2s, height 0.2s, box-shadow 0.2s;
+     transition-delay: 0.5s, 0.2s, 0s, 0s;
+}
+
+.button a:hover::after{
+     width: 60%;
+     height: 100%;
+     right: -2px;
+     box-shadow: -5px 0px 0 rgb(210, 45, 183);
+     box-shadow: -5px 0px 0 rgb(210, 45, 183);
+     transition-delay: 0s, 0s, 0.2s, 0.5s;
+}
+
+
 
 
 /******************************************
