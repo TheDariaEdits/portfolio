@@ -212,3 +212,24 @@
         box-shadow: -5px 0px 0 rgb(210, 45, 183);
         transition-delay: 0s, 0s, 0.2s, 0.5s;
    }
+
+/* Social Media Animation */
+     .social li a:hover{
+          transform: translateX(0.2rem) translateY(-0.2rem);
+     }
+
+     .social li a::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 2.5rem;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.5);
+          transform: skewX(45deg) translateX(7rem);
+          transition: 0.5s;
+     }
+
+     .social li a:hover:before{
+          transform: skewX(45deg) translateX(-5rem);
+     }
