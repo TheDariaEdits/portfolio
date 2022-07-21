@@ -170,6 +170,15 @@ li{
      border: none;
      margin-left: 20vw;
 }
+
+.copyright{
+     text-align: center;
+     width: 30vw;
+     font-size: 1rem;
+     position: absolute;
+     top: 92vh;
+     left: 35vw;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
