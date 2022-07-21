@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    
     <title>Document</title>
 
     <!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
+  <section class="container">
+    <nav class="header">
+      <ul>
+        <li><a href="#About">About Me</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section class="contact">
+      <h1>Let's Talk</h1>
+      <p>Have any more questions or want to hire my services? Send me a message below and I will respond shortly.</p>
+      <article class="contactForm">
+        <form action="https://formspree.io/f/mgeddjob" method="post">
+          <input type="text" name="Name" placeholder="Name" required>
+          <input type="email" name="Email" placeholder="Email Address" required>
+          <input type="text" name="Subject" placeholder="Subject">
+          <textarea name="Message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
+          <input type="submit" value="Submit" id="submitBtn">
+        </form>
+      </article>
+      
+  </section>
     
 </body>
 </html>
