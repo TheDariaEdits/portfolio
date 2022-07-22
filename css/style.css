@@ -218,6 +218,68 @@ li{
      overflow: hidden;
 }
 
+.mainInfo{
+     overflow: scroll;
+     height: 80vh;
+}
+.intro, .tech{
+     display: flex;
+     flex-flow: row wrap;
+     width: 70vw;
+     justify-content: center;
+     margin-left: 15vw;
+}
+
+.certs{
+     display: flex;
+     flex-flow: column nowrap;
+     width: 70vw;
+     margin-left: 15vw;
+}
+
+.techList_item{
+     display: flex;
+     flex-flow: column nowrap;
+     position: relative;
+     list-style: none;
+     width: 10rem;
+     height: 10rem;
+     display: inline-block;
+     border-radius: 1rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+     font-size: 3em;
+}
+
+.tech li span{
+     margin-top: 1rem;
+     font-size: 1rem;
+     text-align: center;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+::-webkit-scrollbar {
+     width: 2rem;
+     height: 0rem;
+}
+
+::-webkit-scrollbar-track{
+     background: transparent;
+     border-radius: 100vw;
+     margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb{
+     background: rgba(207, 250, 143, 0.6);
+     border-radius: 100vw;
+     border: .25rem solid rgba(207, 250, 143, 0.6);
+} 
+
+@supports(scrollbar-color: red blue;) {
+     *{
+          scrollbar-color: transparent rgba(207, 250, 143, 0.6);
+     }
+}
