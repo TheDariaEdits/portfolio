@@ -3,7 +3,7 @@
 /*******************************************/
 
 /* Nav Bar Animation */
-     .header li a::after{
+     header li a::after{
         content: "";
         position: absolute;
         background-color: var(--color-blue);
@@ -20,7 +20,7 @@
         
    }
    
-   .header li:nth-child(2) a::after{
+   header li:nth-child(2) a::after{
    
         background-color: var(--color-green);
         box-shadow: 0 0 10px var(--color-green),
@@ -30,7 +30,7 @@
         0 0 160px var(--color-green);    
    }
    
-   .header li:nth-child(3) a::after{
+   header li:nth-child(3) a::after{
         background-color: var(--color-yellow);
         box-shadow: 0 0 10px var(--color-yellow),
         0 0 20px var(--color-yellow),
@@ -39,7 +39,7 @@
         0 0 160px var(--color-yellow);   
    }
    
-   .header a:hover:after{
+   header a:hover:after{
         width: 100%;
    }
    
