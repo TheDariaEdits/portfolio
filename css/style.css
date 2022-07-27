@@ -55,7 +55,6 @@ html{
 
 
  body {
-     height: 100vh;
      width: 100%;
      margin: 0;
      flex-flow: column nowrap;
@@ -78,11 +77,12 @@ body {
 }
 
 header {
-     background: var(--background);
+     background: var(--color-primary);
      text-align: center;
      position: fixed;
      z-index: 999;
      width: 100%;
+     top: 0;
 }
 
 .nav-toggle {
@@ -93,7 +93,7 @@ header {
    
 .nav-toggle:focus ~ .nav-toggle-label {
      outline: 3px solid rgba(var(--color-white), .75);
-   }
+}
    
 .nav-toggle-label {
      position: absolute;
@@ -161,7 +161,6 @@ nav a {
      transition: opacity 150ms ease-in-out;
 }
    
-
 .nav-toggle:checked ~ nav {
      transform: scale(1,1);
 }
@@ -171,105 +170,26 @@ nav a {
      transition: opacity 250ms ease-in-out 250ms;
 }
    
-@media screen and (min-width: 800px) {
-     .nav-toggle-label {
-       display: none;
-     }
-   
-     header {
-       width: 95vw;
-       display: grid;
-       grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-     }
-     
-     .header-logo {
-       grid-column: 2 / 3;
-     }
-     
-     nav {
-       all: unset; 
-       
-       /* This is support if all unset does not work on browser */
-       position: relative;
-       text-align: left;
-       transition: none;
-       transform: scale(1,1);
-       background: none;
-       top: initial;
-       left: initial;
-       /* end support stuff */
-       
-       grid-column: 3 / span 4;
-       display: flex;
-       justify-content: flex-end;
-       align-items: center;
- }
-     
-nav ul {
-     margin: 1em;  
-     display: flex;
-}
-     
-nav li {
-       margin-left: 3em;
-       margin-bottom: 0;
-}
-     
-nav a {
-       opacity: 1;
-       position: relative;
-}
-     
-nav a::before {
-       content: '';
-       display: block;
-       height: 5px;
-       background: black;
-       position: absolute;
-       top: -.75em;
-       left: 0;
-       right: 0;
-       transform: scale(0, 1);
-       transition: transform ease-in-out 250ms;
-}
-     
-nav a:hover::before {
-       transform: scale(1,1);
-     }
-}
-
-/* ul{
-     list-style: none;
-     display: flex;
-     flex-flow: row nowrap;
-     justify-content: right
-} */
-
-/* li{
-     display: list-item;
-     padding: 0 5vw;
-} */
-
-#logoContainer {
+#logo-container {
      display: flex;
      flex-flow: column nowrap;
-     position: absolute;
+     position: relative;
      align-items: flex-start;
      top: 40vh;
-   }
+}
 
 #logo{
-     position: relative;
-     width: 70vw;
+     position: absolute;
+     width: 70%;
      height: auto;
-     left:50vw;
+     left:50%;
      transform: translate(-50%, -50%);
 }
 
-#moreInfo {
-  position: relative;
-  top: -5vh;
-  padding-left: 15vw;
+#more-info {
+  position: absolute;
+  top: 5%;
+  padding-left: 15%;
 
 }
 
@@ -277,12 +197,13 @@ nav a:hover::before {
      position: relative;
      display: inline-block;
      border: 2px solid var(--color-pink);
-     padding: 15px 30px;
-     margin: 20px 0;
+     max-width: 15em;
+     padding: 1.5em 1em;
+     margin: 2em 0;
      text-transform: uppercase;
      text-decoration: none;
      font-weight: 600;
-     letter-spacing: 2px;
+     letter-spacing: .2em;
      color: var(--color-white);
      -webkit-box-reflect: below 0px linear-gradient(transparent, #0002 );
      transition: 0.2s;
@@ -290,14 +211,16 @@ nav a:hover::before {
 }
 
 .contact{
+     position: absolute;
      display: flex;
      flex-flow: column nowrap;
      justify-content: center;
      align-items: center;
      font-family: 'Space Mono', monospace;
      width: 50vw;
-     margin: 5vh 25vw;
+     margin: 10vh 25vw;
 }
+
 
 .contact .contactForm{
      position: relative;
@@ -341,6 +264,7 @@ nav a:hover::before {
      left: -5vh;
 
 }
+
 .social ul{
      position: relative;
      display: flex;
@@ -348,6 +272,7 @@ nav a:hover::before {
      z-index: 2;
 
 }
+
 .social li{
      position: relative;
      list-style: none;
@@ -383,7 +308,12 @@ nav a:hover::before {
      flex-flow: row wrap;
      width: 70vw;
      justify-content: center;
+     margin-top: 10vh;
      margin-left: 15vw;
+}
+
+.tech, .certs{
+     margin-top: 5vh;
 }
 
 .certs{
@@ -393,7 +323,16 @@ nav a:hover::before {
      margin-left: 15vw;
 }
 
-.techList_item{
+.text-center{
+     text-align: center;
+}
+
+.tech ul{
+     display: flex;
+     flex-flow: row nowrap;
+     padding-right: 5vw;
+}
+.tech-list-item{
      display: flex;
      flex-flow: column nowrap;
      position: relative;
@@ -413,6 +352,85 @@ nav a:hover::before {
      margin-top: 1rem;
      font-size: 1rem;
      text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+     .nav-toggle-label {
+       display: none;
+     }
+   
+     header {
+       width: 95vw;
+       top: 0;
+       display: grid;
+       grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+     }
+     
+     .header-logo {
+       grid-column: 2 / 3;
+     }
+     
+     nav {
+       all: unset; 
+       
+       /* This is support if all unset does not work on browser */
+       position: relative;
+       text-align: left;
+       transition: none;
+       transform: scale(1,1);
+       background: none;
+       top: initial;
+       left: initial;
+       /* end support stuff */
+       
+       grid-column: 3 / span 4;
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+     }
+     
+     nav ul {
+     display: flex;
+     }
+     
+     nav li {
+       margin-left: 3em;
+       margin-bottom: 0;
+     }
+     
+     nav a {
+       opacity: 1;
+       position: relative;
+     }
+     
+     nav a::before {
+       content: '';
+       display: block;
+       height: 5px;
+       position: absolute;
+       top: -.75em;
+       left: 0;
+       right: 0;
+       transform: scale(0, 1);
+       transition: transform ease-in-out 250ms;
+     }
+     
+     nav a:hover::before {
+       transform: scale(1,1);
+     }
+
+     #more-info {
+          top: 15vh;
+          padding-left: 15%;
+     }
+
+     .button a{
+          position: relative;
+          display: inline-block;
+          border: 2px solid var(--color-pink);
+          min-width: 20em;
+          margin: 2em 0;
+     }
 }
 /******************************************
 /* ADDITIONAL STYLES
