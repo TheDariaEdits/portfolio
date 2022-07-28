@@ -2,18 +2,6 @@
 /* ANIMATION
 /*******************************************/
 
-/* Nav Bar Animation */
-     
-   header li a:hover{
-        color: var(--color-blue)
-   }
-   header li:nth-child(2) a:hover{
-        color: var(--color-yellow)
-   }
-   header li:nth-child(3) a:hover{
-        color: var(--color-green)
-   }
-   
 /* Logo Animation */
    #logo path:nth-child(1){
         stroke-dasharray: 351.6800231933594;
@@ -207,43 +195,44 @@
 
 
      @media screen and (min-width: 800px) {
+          /* Nav Bar Animation */
           header li a::after{
-        content: "";
-        position: absolute;
-        background-color: var(--color-blue);
-        height: 3px;
-        width: 0;
-        left: 0;
-        bottom: -1em;
-        box-shadow: 0 0 10px var(--color-blue),
-        0 0 20px var(--color-blue),
-        0 0 40px var(--color-blue),
-        0 0 80px var(--color-blue),
-        0 0 160px var(--color-blue);
-        transition: 0.2s;
+               content: "";
+               position: absolute;
+               background-color: var(--color-blue);
+               height: 3px;
+               width: 0;
+               left: 0;
+               bottom: -1em;
+               box-shadow: 0 0 10px var(--color-blue),
+               0 0 20px var(--color-blue),
+               0 0 40px var(--color-blue),
+               0 0 80px var(--color-blue),
+               0 0 160px var(--color-blue);
+               transition: 0.2s;
         
-   }
+          }
    
-   header li:nth-child(2) a::after{
-        background-color: var(--color-green);
-        box-shadow: 0 0 10px var(--color-green),
-        0 0 20px var(--color-green),
-        0 0 40px var(--color-green),
-        0 0 80px var(--color-green),
-        0 0 160px var(--color-green);    
-   }
+          header li:nth-child(2) a::after{
+               background-color: var(--color-green);
+               box-shadow: 0 0 10px var(--color-green),
+               0 0 20px var(--color-green),
+               0 0 40px var(--color-green),
+               0 0 80px var(--color-green),
+               0 0 160px var(--color-green);    
+          }
    
-   header li:nth-child(3) a::after{
-        background-color: var(--color-yellow);
-        box-shadow: 0 0 10px var(--color-yellow),
-        0 0 20px var(--color-yellow),
-        0 0 40px var(--color-yellow),
-        0 0 80px var(--color-yellow),
-        0 0 160px var(--color-yellow);   
-   }
+          header li:nth-child(3) a::after{
+               background-color: var(--color-yellow);
+               box-shadow: 0 0 10px var(--color-yellow),
+               0 0 20px var(--color-yellow),
+               0 0 40px var(--color-yellow),
+               0 0 80px var(--color-yellow),
+               0 0 160px var(--color-yellow);   
+          }
    
-   header a:hover:after{
-        width: 100%;
-   }
+          header a:hover:after{
+               width: 100%;
+          }
           
      }
