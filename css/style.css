@@ -242,14 +242,6 @@ nav a {
      border: none;
 }
 
-/* footer{
-     position: fixed;
-     left:0px;
-     bottom:0px;
-     width: 100%;
-     text-align: center;
-     background-color: var(--color-primary);
-} */
 .copyright{
      text-align: center;
      width: 30vw;
@@ -305,8 +297,8 @@ nav a {
 }
 
 .intro, .tech{
-     display: flex;
-     flex-flow: row wrap;
+     /* display: flex;
+     flex-flow: row wrap; */
      width: 70vw;
      justify-content: center;
      margin-top: 10vh;
@@ -328,10 +320,11 @@ nav a {
      text-align: center;
 }
 
-.tech ul{
-     display: flex;
-     flex-flow: row nowrap;
-     padding-right: 5vw;
+.tech-list{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax( 5em, 1fr) );
+     padding: 0;
+     
 }
 .tech-list-item{
      display: flex;
