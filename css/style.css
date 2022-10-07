@@ -381,7 +381,7 @@ nav a {
      column-gap: 0.5em;
      align-items: center;
      text-decoration: none;
-     color: var(--color-white);
+     color: var(--color-primary);
      background-color: var(--color-blue);
    }
 
