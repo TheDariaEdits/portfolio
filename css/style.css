@@ -291,7 +291,7 @@ nav a {
      overflow: hidden;
 }
 
-.main-info{
+.main-info {
      overflow: scroll;
      height: 80vh;
 }
@@ -347,9 +347,12 @@ nav a {
      text-align: center;
 }
 
+.portfolio-page {
+     overflow: auto;  
+}
 .projects{
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(1fr);
      overflow: auto;
 }
 
@@ -483,6 +486,10 @@ nav a {
           border: 2px solid var(--color-pink);
           min-width: 20em;
           margin: 2em 0;
+     }
+
+     .projects {
+          grid-template-columns: repeat(3, 1fr);
      }
 }
 /******************************************
